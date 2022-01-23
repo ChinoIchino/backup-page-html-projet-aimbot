@@ -1,0 +1,80 @@
+/*code css pour page principal*/
+body {
+	background-color: #000000;
+	}
+.text1 {
+	color: #C0C0C0;
+	position: absolute;
+	top: 10px; left: 40px;
+	}
+	
+.text1_suite {
+	margin-top: -100px
+}
+
+.lien_page_secondaire {
+	position: absolute;
+	top: 680px; left: 40px;
+}
+a:link {
+	color: 164B0F;
+}
+a:active {
+	color: 164B0F;
+}
+a:visited {
+	color: 164B0F;
+}
+a:hover {
+	color: green;
+}
+
+.Lire_Suite {
+	margin-left: 500px;
+	margin-bottom: 100px;
+}
+/*#C0C0C0 (silver color)*/
+/*.carre1 {
+  width: 20%;
+  padding: 20%;
+  position absolute;
+  top 100;
+  bottom 100;
+  left 100;
+  right 100;
+  background: #808080;
+  
+  carre1 background (#808080;)
+					#282827DB;
+}*/
+
+.carre_haut {
+	background: #282827FF;
+	width: 1840px;
+	height: 700px;
+	position: absolute;
+	left: 40px; top: 70px; right: 40px;
+}
+
+.carre_bas {
+	background: #282827FF;
+	width: 1840px;
+	height: 700px;
+	position: absolute;
+	left: 0px; top: 800px; right: 40px;
+}
+
+.text2 {
+	color: #C0C0C0;
+	margin-left: 40px;
+	margin-top: 30px;
+}
+
+.Lire_Suite2 {
+	margin-left: 500px;
+	margin-bottom: 100px;
+}
+
+.text2_suite {
+	margin-top: -100px
+}

@@ -1,0 +1,42 @@
+/*page css pour page secondaire*/
+body {
+	background-color: #000000;
+	}
+
+.lien_page_principal {
+	margin-top: 600px;
+}
+a:link {
+	color: 164B0F;
+}
+a:active {
+	color: 164B0F;
+}
+a:visited {
+	color: 164B0F;
+}
+a:hover {
+	color: green;
+}
+.carre1 {
+	background: #282827FF;
+	width: 1840px;
+	height: 700px;
+	position: absolute;
+	left: 40px; top: 70px; right: 40px;
+}
+
+.Lire_Suite {
+	margin-left: 500px;
+	margin-bottom: 100px;
+}
+
+.text1_suite {
+	margin-top: -100px
+}
+
+.text1 {
+	color: #C0C0C0;
+	position: absolute;
+	top: 10px; left: 40px;
+	}
