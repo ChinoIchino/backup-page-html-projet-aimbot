@@ -1,0 +1,111 @@
+<html> 
+<head>
+  <title>TEST</title>
+  <meta charset="utf8">
+  <style>
+  button.btnmateriel{
+    font-size: 1.5em;
+    padding: 5px;
+  }
+  
+  .onglet{
+    display:none;
+    width:100%;
+    min-height:60px;
+    padding:10px;
+    margin :5px;
+    border : 1px solid black;
+  }
+  
+  .active{
+    background-color : green;
+  }
+  </style>
+ </head>
+ <body>
+ 
+  <section class="boutique">
+    <p>
+      <button class="btnmateriel active" id="btn_1" data-onglet="1" > materiel dessin papier </button>
+      <button class="btnmateriel" id="btn_2" data-onglet="2" > materiel dessin tablette </button>
+    </p>       
+    
+    <div class="div_onglets">
+    <div id="onglet_1" class="onglet">
+      <p>
+       Ceci est l'onglet N° 1
+      </p>
+    </div>
+    
+     <div id="onglet_2" class="onglet">
+      <p>
+       Ceci est l'onglet N° 2
+      </p>
+    </div>    
+    </div>
+
+  </section>
+ <script type="text/javascript">
+
+  function hideAllElementByClassNam(clName){ 
+    var onglets = document.getElementsByClassName("onglet");
+    //on masque tous les onglets
+    for (var i = 0; i < onglets.length; i++) {
+      onglets[i].style.display = 'none';
+    }
+  }
+  
+  function ShowElementById(idElm){
+    document.getElementById(idElm).style.display = "inline-block";
+  }
+  
+  function addClassActiveElm(idElm){
+    var cl_btn_active = document.getElementsByClassName("active");
+    //on retire la class Active de tous les onglets
+    for (var i = 0; i < cl_btn_active.length; i++) {
+      removeClass(cl_btn_active[i],"active") ;
+    }  
+    //on met la class active au bouton cliqué
+    document.getElementById(idElm).className = "btnmateriel active";
+    
+  }
+  
+  function removeClass(e,c) {
+    e.className = e.className.replace( new RegExp('(?:^|\\s)'+c+'(?!\\S)') ,'');
+  }
+  
+  var DisplayHideOnglets = function() {
+      //on masque tous les onglets
+      hideAllElementByClassNam('onglet');
+      
+      //numero de l'onglet à afficher
+     var NumOnglet = this.getAttribute("data-onglet");  
+      
+      //on affiche l'onglet
+      if(typeof(NumOnglet) !="undefined" && NumOnglet!=null){
+        ShowElementById("onglet_"+NumOnglet);
+        addClassActiveElm("btn_"+NumOnglet);
+      }
+      
+    
+  };
+  
+  function initListener(){
+    //on ajoute le listener
+    var cl_btnmateriel = document.getElementsByClassName("btnmateriel");
+    for (var i = 0; i < cl_btnmateriel.length; i++) {
+      cl_btnmateriel[i].addEventListener('click', DisplayHideOnglets, false);
+    }
+  }
+  
+  //Initialisation
+  initListener();
+  
+  //par défaut.. on affiche le premier onglet
+  ShowElementById("onglet_1");
+    
+ </script>
+ 
+ </body>
+
+</html>

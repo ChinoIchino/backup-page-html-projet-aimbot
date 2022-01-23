@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>page bidon</title>
+
+</head>
+<body>
+<p>
+un peu de texte html
+<br />
+encore une peu du contenu de la page......
+<br />
+...................................
+<br />
+...................................
+<br />
+Voici le debut de mon article bla bla bla bla bla bla bla bla bla
+<br />
+bliblib,liblibliblibli
+<br />
+<span id="suite">Pour lire la suite cliquez ici</span>
+</p>
+
+<script type="text/javascript">
+
+var suite = document.getElementById('suite');
+var p = document.createElement('p');
+
+var texte = document.createTextNode(' Texte a remplacer par la suite de mon article bli bli bli bli bli bli bli bli blo blob lbo blo.');
+
+suite.onclick = function() {
+suite.parentNode.removeChild(suite);
+document.body.appendChild(p)
+p.appendChild(texte);
+}
+</script>
+</body>
+</html>
